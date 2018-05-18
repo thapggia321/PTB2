@@ -49,11 +49,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if countdots == 0{
                     return true
                 } else{
-                    if countdots > 0 && string == "."{
+                    if countdots > 0 && string == "." {
                         return false
                     } else{
                         return true
-                    }
+                        }
                 }
             } else{
                 if string == "-"{
@@ -73,9 +73,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btngiaipt(_ sender: Any) {
         lblnghiem2.text = ""
         lblnghiem1.isHidden = false
-        if(txta.text! == "" || txtb.text! == "" || txtc.text! == "")
+        if(txta.text! == "." || txtb.text! == "." || txtc.text! == ".")
         {
-            lblnghiem1.text = "Ban can nhap day du cac so a,b va c"
+            lblnghiem1.text = "Ban nhap thieu so"
+        }
+        else if(txta.text! == "" || txtb.text! == "" || txtc.text! == "")
+        {
+            lblnghiem1.text = "Ban nhap so A B C"
         }
         else
         {
@@ -111,6 +115,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+       
     }
 }
-
